@@ -1,5 +1,5 @@
 #Rread file and convert to list
-def read_file(filename: str) -> list[int]:
+def read_file(filename) -> list[int]:
     """
     Reads a file and returns a list of integers.
 
@@ -10,6 +10,12 @@ def read_file(filename: str) -> list[int]:
     """
     # Open the file
     # Read the file
-    return 0 
+    f=open(filename,"r")
+    name=f.read().split(",")
+    ls=[]
+    for i in name:
+        ls.append(int(i))
+    return ls
+print(read_file("data.txt"))
 
 #Print list from file
